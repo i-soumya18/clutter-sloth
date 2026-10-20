@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 680" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="blueCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="purpleCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="emeraldCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="amberCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="cyanCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e7490"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="roseCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#881337"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+
+    <!-- Filters for shadow -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowCyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowEmerald" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="920" height="680" rx="16" fill="url(#bgGrad)" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Grid subtle overlay -->
+  <g stroke="#334155" stroke-opacity="0.15" stroke-width="1">
+    <line x1="0" y1="100" x2="920" y2="100"/>
+    <line x1="0" y1="200" x2="920" y2="200"/>
+    <line x1="0" y1="300" x2="920" y2="300"/>
+    <line x1="0" y1="400" x2="920" y2="400"/>
+    <line x1="0" y1="500" x2="920" y2="500"/>
+    <line x1="0" y1="600" x2="920" y2="600"/>
+  </g>
+
+  <!-- Title Badge -->
+  <rect x="360" y="16" width="200" height="26" rx="13" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="460" y="33" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="1">SYSTEM ARCHITECTURE</text>
+
+  <!-- 1. Downloads Folder -->
+  <g transform="translate(340, 56)" filter="url(#cardShadow)">
+    <rect width="240" height="46" rx="10" fill="url(#blueCard)" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="120" y="28" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Downloads Directory</text>
+  </g>
+
+  <!-- Arrow A -> B -->
+  <path d="M 460 102 L 460 140" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="345" y="112" width="230" height="18" rx="4" fill="#0f172a" fill-opacity="0.9" stroke="#334155"/>
+  <text x="460" y="125" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="10.5" font-weight="500" text-anchor="middle">Settle Delay (120s) &amp; CPU &lt; 60%</text>
+
+  <!-- 2. sloth.engine -->
+  <g transform="translate(330, 142)" filter="url(#cardShadow)">
+    <rect width="260" height="46" rx="10" fill="#1e293b" stroke="#818cf8" stroke-width="1.5"/>
+    <text x="130" y="28" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600" text-anchor="middle">sloth.engine (Candidates)</text>
+  </g>
+
+  <!-- Arrow B -> C -->
+  <path d="M 460 188 L 460 216" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 3. sloth.extract -->
+  <g transform="translate(305, 218)" filter="url(#cardShadow)">
+    <rect width="310" height="46" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="155" y="28" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600" text-anchor="middle">sloth.extract (PIL / pypdf / pypdfium2)</text>
+  </g>
+
+  <!-- Arrow C -> D -->
+  <path d="M 460 264 L 460 294" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 4. Mid Tier: sloth.db | sloth.classify | Unsloth Desktop -->
+
+  <!-- Left: sloth.db SQLite -->
+  <g transform="translate(40, 292)" filter="url(#cardShadow)">
+    <rect width="230" height="58" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="12" y="12" width="34" height="34" rx="6" fill="#0369a1"/>
+    <text x="29" y="34" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="18" text-anchor="middle">🗄️</text>
+    <text x="56" y="29" fill="#f0f9ff" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="700">sloth.db (SQLite)</text>
+    <text x="56" y="47" fill="#7dd3fc" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11">Proposals, Moves, Trust &amp; Undo</text>
+  </g>
+
+  <!-- Center: sloth.classify -->
+  <g transform="translate(345, 296)" filter="url(#cardShadow)">
+    <rect width="230" height="52" rx="10" fill="url(#purpleCard)" stroke="#c084fc" stroke-width="1.5"/>
+    <text x="115" y="32" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14.5" font-weight="700" text-anchor="middle">sloth.classify</text>
+  </g>
+
+  <!-- Right: Unsloth Desktop -->
+  <g transform="translate(645, 292)" filter="url(#cardShadow)">
+    <rect width="235" height="58" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+    <rect x="12" y="12" width="34" height="34" rx="6" fill="#047857"/>
+    <text x="29" y="34" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="18" text-anchor="middle">🤖</text>
+    <text x="56" y="29" fill="#ecfdf5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="700">Unsloth Desktop</text>
+    <text x="56" y="47" fill="#6ee7b7" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11">Open-Weight Model (/v1 API)</text>
+  </g>
+
+  <!-- Connectors Mid Tier -->
+  <!-- DB <-> Classify -->
+  <path d="M 270 312 L 343 312" stroke="#38bdf8" stroke-width="1.8" marker-end="url(#arrowCyan)"/>
+  <path d="M 345 332 L 272 332" stroke="#38bdf8" stroke-width="1.8" marker-end="url(#arrowCyan)"/>
+  <rect x="272" y="315" width="70" height="15" rx="3" fill="#0f172a" stroke="#0369a1"/>
+  <text x="307" y="326" fill="#7dd3fc" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="9" font-weight="600" text-anchor="middle">Few-Shot</text>
+
+  <!-- Classify <-> Unsloth -->
+  <path d="M 575 312 L 643 312" stroke="#34d399" stroke-width="1.8" marker-end="url(#arrowEmerald)"/>
+  <path d="M 645 332 L 577 332" stroke="#34d399" stroke-width="1.8" marker-end="url(#arrowEmerald)"/>
+  <rect x="580" y="315" width="60" height="15" rx="3" fill="#0f172a" stroke="#047857"/>
+  <text x="610" y="326" fill="#6ee7b7" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="9" font-weight="600" text-anchor="middle">Prompt/JSON</text>
+
+  <!-- Arrow D -> Decision G -->
+  <path d="M 460 348 L 460 390" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 5. Decision: Trust Ladder -->
+  <g transform="translate(315, 392)" filter="url(#cardShadow)">
+    <rect width="290" height="50" rx="12" fill="url(#amberCard)" stroke="#fcd34d" stroke-width="1.5"/>
+    <text x="145" y="31" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14.5" font-weight="700" text-anchor="middle">Trust Ladder Assessment</text>
+  </g>
+
+  <!-- Branch Left: Preview Mode -->
+  <path d="M 370 442 L 370 470 L 220 470 L 220 500" stroke="#f87171" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <rect x="140" y="460" width="160" height="20" rx="4" fill="#450a0a" stroke="#dc2626"/>
+  <text x="220" y="474" fill="#fca5a5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">never_auto OR Streak &lt; 5</text>
+
+  <!-- Branch Right: Auto-Move -->
+  <path d="M 550 442 L 550 470 L 700 470 L 700 500" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <rect x="620" y="460" width="160" height="20" rx="4" fill="#052e16" stroke="#16a34a"/>
+  <text x="700" y="474" fill="#86efac" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">Streak &gt;= 5 &amp; Auto Allowed</text>
+
+  <!-- 6. Left: Proposals Queue -->
+  <g transform="translate(90, 502)" filter="url(#cardShadow)">
+    <rect width="260" height="46" rx="10" fill="#1e293b" stroke="#f87171" stroke-width="1.5"/>
+    <text x="130" y="28" fill="#fee2e2" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Proposals Queue (Preview Mode)</text>
+  </g>
+
+  <!-- Arrow Preview -> Review -->
+  <path d="M 220 548 L 220 580" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 7. Left: sloth review -->
+  <g transform="translate(70, 582)" filter="url(#cardShadow)">
+    <rect width="300" height="66" rx="10" fill="#0f172a" stroke="#f43f5e" stroke-width="1.5"/>
+    <text x="150" y="27" fill="#ffe4e6" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">sloth review (Interactive)</text>
+    <text x="150" y="46" fill="#fda4af" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11" text-anchor="middle">Enter = Approve (Streak +1)</text>
+    <text x="150" y="60" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="10" text-anchor="middle">c = Reassign (Streak Reset &amp; Exemplar Saved)</text>
+  </g>
+
+  <!-- 8. Right: Sorted/Category Directory -->
+  <g transform="translate(570, 502)" filter="url(#cardShadow)">
+    <rect width="260" height="46" rx="10" fill="url(#emeraldCard)" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="130" y="28" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="13.5" font-weight="600" text-anchor="middle">Sorted/Category/ Directory</text>
+  </g>
+
+  <!-- Arrow Sorted -> Undo -->
+  <path d="M 700 548 L 700 580" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 9. Right: sloth undo -->
+  <g transform="translate(570, 582)" filter="url(#cardShadow)">
+    <rect width="260" height="66" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+    <text x="130" y="27" fill="#ecfdf5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="13.5" font-weight="700" text-anchor="middle">sloth undo (Batch / Move)</text>
+    <text x="130" y="46" fill="#a7f3d0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11" text-anchor="middle">Safe file reversion to original path</text>
+    <text x="130" y="60" fill="#6ee7b7" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="10" text-anchor="middle">Resets trust streak + zero overwrites</text>
+  </g>
+
+</svg>

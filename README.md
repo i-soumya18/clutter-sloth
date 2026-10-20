@@ -2,6 +2,13 @@
 
 A slow, deliberate, local-only sorting system designed for the Downloads directory. Each file is analyzed by a small open-weight vision model served locally via **Unsloth Desktop**, assigned a descriptive title, and organized into an appropriate category folder. No data is transmitted externally, deletions are strictly prohibited, and all operations are fully reversible.
 
+<p align="center">
+  <img src="assets/architecture.svg" alt="Clutter Sloth Architecture Flowchart" width="100%">
+</p>
+
+<details>
+<summary><b>View Mermaid Flowchart Definition</b></summary>
+
 ```mermaid
 flowchart TD
     A["Downloads Directory"] -->|"Settle Delay 120s and CPU under 60%"| B["sloth.engine (Candidates)"]
@@ -20,6 +27,7 @@ flowchart TD
     I --> M["sloth undo (Batch or Single Move)"]
     M -->|"Reversion"| N["File Restored and Streak Reset"]
 ```
+</details>
 
 ---
 
