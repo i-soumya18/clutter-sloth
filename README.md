@@ -4,19 +4,21 @@ A slow, deliberate, local-only sorting system designed for the Downloads directo
 
 ```mermaid
 flowchart TD
-    A["Downloads Folder"] -->|"Settle Delay (120s) & CPU < 60%"| B["sloth.engine (Candidates)"]
+    A["Downloads Directory"] -->|"Settle Delay 120s and CPU under 60%"| B["sloth.engine (Candidates)"]
     B --> C["sloth.extract (PIL / pypdf / pypdfium2)"]
     C --> D["sloth.classify"]
-    D <-->|"Dynamic In-Context Corrections"| E[("sloth.db (SQLite)")]
-    D <-->|"Local OpenAI-Compatible API"| F["Unsloth Desktop (GGUF Model)"]
+    D -->|"Dynamic In-Context Corrections"| E[("sloth.db SQLite")]
+    E -->|"Recent Exemplars"| D
+    D -->|"Prompt with Image / Text"| F["Unsloth Desktop (GGUF Model)"]
+    F -->|"Category and Title JSON"| D
     D --> G{"Trust Ladder Assessment"}
-    G -->|"never_auto OR Streak < 5"| H["Queue in Proposals (Preview Mode)"]
-    G -->|"Streak >= 5 & Permitted"| I["Direct Relocation to Sorted/Category/"]
+    G -->|"never_auto or Streak under 5"| H["Queue in Proposals (Preview Mode)"]
+    G -->|"Streak 5 or more (Auto Allowed)"| I["Direct Relocation to Sorted/Category/"]
     H --> J["sloth review (Interactive Verification)"]
-    J -->|"Approval"| K["Category Streak Incremented"]
-    J -->|"Category Reassignment"| L["Streak Reset + Exemplar Recorded"]
-    I --> M["sloth undo (Batch / Single Move)"]
-    M -->|"Reversion"| N["File Restored + Streak Reset"]
+    J -->|"Approve"| K["Category Streak Incremented"]
+    J -->|"Reassign Category"| L["Streak Reset and Exemplar Recorded"]
+    I --> M["sloth undo (Batch or Single Move)"]
+    M -->|"Reversion"| N["File Restored and Streak Reset"]
 ```
 
 ---
