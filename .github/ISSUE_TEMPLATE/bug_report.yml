@@ -1,0 +1,41 @@
+name: Bug Report
+description: Report an issue or unexpected behavior in Clutter Sloth
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Clutter Sloth! Please provide as much detail as possible.
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS version, Python version, and model server (e.g. Windows 11, Python 3.12, Unsloth Desktop with Qwen3.5-4B-GGUF).
+      placeholder: "Windows 11, Python 3.12, Unsloth Desktop"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: What commands were run and what file types caused the issue?
+      placeholder: |
+        1. Run 'sloth scan --now'
+        2. Place file 'example.pdf' in Downloads
+        3. See error ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs or Terminal Output
+      description: Please copy and paste any terminal output or stack traces.
+      render: shell
